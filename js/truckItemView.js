@@ -4,6 +4,7 @@ var TruckItemView = Backbone.View.extend({
 
 	tagName: 'div',
 	className: 'ui-card',
+	// data-id: this.model.id,
 	//this is the script from index.html.
 	template: $('#truck-item-template').html(),
 

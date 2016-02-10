@@ -9,7 +9,6 @@ _.templateSettings = {
 //========template is optional
 
 var SomeView = Backbone.View.extend({
-	
 	initialize: function(){
 		this.listenTo(this.model, 'change', this.render);
 	},
@@ -27,9 +26,11 @@ var SomeView = Backbone.View.extend({
 
 });
 
+//wrap the index page into a view so can press back
 
 var Router = Backbone.Router.extend({
 	routes: {
+		// "": ""
 		"trucks/:id" : "showFoodTruck"
 	},
 
@@ -198,4 +199,44 @@ var LikeButtonView = Backbone.View.extend({
 
 });
 
+=========================LIKES BELOW 
 */
+
+//TO CHANGE NUMBER OF LIKES
+$('.list').on ('click', '.like', function(){
+	console.log('hello');
+	console.log($(this).parent());
+	// console.log($(this).closest('.ui-card').data('dish_id'));
+	// console.log($(this).counter)
+
+	//NOT GETTING DISH ID to change no of likes. css heart working and liked/unliked classes
+	var dishId = $(this).closest('.ui-card').data('id')
+
+	var options = {
+		url: 'http://localhost:3000/api/dishes/'+ dishId +'/likes',
+		method: 'post',
+		dataType: 'json'
+	};
+
+	var $counter = $(this).closest('.ui-card').find('.counter');
+	
+	//NEW LIKE CREATED
+	$.ajax(options).done(function(data){
+		$counter.html(data.count)
+	});
+
+	var $heart = $(this).closest('.ui-card').find('.like');
+	if ($heart.hasClass('liked')){
+		$heart.removeClass('liked');
+	}
+	else {
+		$heart.addClass('liked');
+	}
+
+});
+
+
+
+
+
+

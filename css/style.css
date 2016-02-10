@@ -76,13 +76,9 @@
 	position: relative;
 }
 
-.image:hover .like{
-	opacity: 1;
-}
-
 .like {
-	/*user-select: none;*/
-	/*-webkit-user-select: none;*/
+	user-select: none;
+	-webkit-user-select: none;
 	font-size: 3em;
 	position: absolute;
 	top: 0.2em;
@@ -91,6 +87,10 @@
 	transition: .5s;
 	cursor: pointer;
 	opacity: 0;
+}
+
+.image:hover .like{
+	opacity: 1;
 }
 
 .like:hover {

@@ -30,22 +30,24 @@
 		<script id="details-template" type="text/x-underscore-template">
 
 			<h1>{{ name }}</h1>
+			<img src="{{image_url}}">
+			<h2>likes {{ counter }}<h2>
 
 			</script>
 
 <script id="truck-item-template" type="text/x-underscore-template">
-			
-				<div class="slider">
-				<div class="like">&hearts;</div>
-					<div class="slider-wrapper">
+				
+				<div class="slider image">
+					<div class="slider-wrapper">	
 						<img src="{{image_url}}" alt="">
 						<img src="http://trulycaribbean.net/books/wp-content/uploads/2015/06/sandwich.png">
 					</div>
+					<span class="like">&hearts;</span>
 				</div>
 
 				<div class="content">
 					<h2><a href="#trucks/{{ id }}" data-name="{{ name }}">{{ name }}</a></h2>
-					<div>{{ counter }}</div>
+					<div class="counter">{{ counter }}</div>
 				</div>
 </script>
 
