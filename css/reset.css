@@ -1,0 +1,60 @@
+html { box-sizing: border-box; }
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-size: inherit;
+}
+p,
+blockquote,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+/*this is for a bug in IE*/
+main {
+	display: block; 
+}
+
+button {
+	color: inherit;
+	transition: .3s;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*to fit a fluid container*/
+img {
+	max-width: 100%;
+	border: 0;
+	height: auto;
+}
+
+
+
+/*pseudo selector - hover
+a:hover
+
+pseudo elements - created odynamically
+div: before div: after;
+
+this way is not efficient. Use first 5 lines html{ }
+div::after {
+	content: 'abc';
+	color: red;
+}
+
+*/

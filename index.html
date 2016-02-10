@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>Food Trucking</h1>
+
+	<div class="container">
+		<div class="trucks">
+				
+				<div class="new-truck-form">
+					<input type="text">
+					<button>new food truck</button>
+				</div>
+
+				<div class="list">			
+				</div>
+
+				<div class="load-more content">
+					<h1>load more</h1>
+				</div>
+
+			</div><div class="map">map</div>	
+	</div>
+	
+		<script id="details-template" type="text/x-underscore-template">
+
+			<h1>{{ name }}</h1>
+
+			</script>
+
+<script id="truck-item-template" type="text/x-underscore-template">
+			
+				<div class="slider">
+				<div class="like">&hearts;</div>
+					<div class="slider-wrapper">
+						<img src="{{image_url}}" alt="">
+						<img src="http://trulycaribbean.net/books/wp-content/uploads/2015/06/sandwich.png">
+					</div>
+				</div>
+
+				<div class="content">
+					<h2><a href="#trucks/{{ id }}" data-name="{{ name }}">{{ name }}</a></h2>
+					<div>{{ counter }}</div>
+				</div>
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4pzWRbOxdggW7YfTFbFtYRUUds_z7eTw"></script>
+
+<script src="js/dish.js"></script>
+<script src="js/dishes.js"></script>
+<script src="js/truckItemView.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+

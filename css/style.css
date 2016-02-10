@@ -1,0 +1,117 @@
+.container {
+	display: flex;
+}
+
+.trucks {
+	background-color: gray;
+	flex: 3;
+	overflow-y: scroll;
+	height: 100vh;
+	position: relative;
+}
+
+.map {
+	background-color: pink;
+	flex: 2;
+	height: 100vh;
+}
+
+.ui-card {
+	width: 48%;
+	margin: 0 1% 1% 0;
+	float: left;
+	background-color: linen;
+}
+
+/*overflow must be hidden for slider*/
+.slider{
+	max-width: 500px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+/*if 3 images, 300% etc*/
+.slider-wrapper{
+	width: 200%;
+	left:0;
+	position: relative;
+	transition: 1s;
+}
+
+/*floated left each element*/
+.slider-wrapper img{
+	width: 50%;
+	height: auto;
+	float: left;
+}
+
+.load-more {
+	bottom: 0;
+	clear: left;
+	background-color: plum;
+	cursor: pointer;
+}
+
+.load-more h1 {
+	text-align: center;
+}
+
+.content {
+	padding: 1em;
+}
+
+.new-truck-form input{
+	width: 50%;
+}
+
+.new-truck-form button{
+	width: 50%;
+	background-color: tomato;
+}
+
+/*FOR OVERLAP OF heart(like) and image*/
+/*FOR FADE in of heart and colour*/
+.image {
+	position: relative;
+}
+
+.image:hover .like{
+	opacity: 1;
+}
+
+.like {
+	/*user-select: none;*/
+	/*-webkit-user-select: none;*/
+	font-size: 3em;
+	position: absolute;
+	top: 0.2em;
+	right: 0.2em;
+	color: blue;
+	transition: .5s;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.like:hover {
+	color: tomato;
+}
+
+.content {
+	padding: 1em;
+}
+
+.right {
+	float: right;
+}
+
+.liked {
+	color: tomato;
+	opacity: 1;
+}
+
+
+
+
+
+
